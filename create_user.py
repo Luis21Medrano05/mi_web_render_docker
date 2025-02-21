@@ -8,7 +8,7 @@ with app.app_context():
     password = "admin123"    # Cambia "admin123" por la contraseña que desees
 
     # Crea el hash de la contraseña para almacenarla de forma segura
-    password_hash = generate_password_hash(password, method="sha256")
+    password_hash = generate_password_hash(password)
 
     # Crea un nuevo usuario
     new_user = User(username=username, password_hash=password_hash)
